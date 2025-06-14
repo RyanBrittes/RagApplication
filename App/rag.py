@@ -5,7 +5,6 @@ from langchain_community.llms import Ollama
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 
-
 # 1. Carregar PDF
 pdf_path = "/home/ryan/Documents/AI/RagApp/Files/rag_file01.pdf"
 loader = PyPDFLoader(pdf_path)
@@ -31,7 +30,7 @@ embeddings = HuggingFaceEmbeddings(
 db = Chroma.from_documents(
     documents=texts,
     embedding=embeddings,
-    persist_directory="./ChromaDB"
+    persist_directory="/home/ryan/Documents/AI/RagApp/ChromaDB"
 )
 
 retriever = db.as_retriever()
@@ -47,7 +46,7 @@ qa = RetrievalQA.from_chain_type(
 )
 
 # 7. Fazer pergunta
-pergunta = "Qual o principal conteúdo deste documento PDF?"
+pergunta = "Quem escreveu o pdf?"
 resposta = qa(pergunta)
 
 # 8. Mostrar resposta
