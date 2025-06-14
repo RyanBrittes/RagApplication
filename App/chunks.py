@@ -1,6 +1,7 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from extractor import Extractor
 
+#Classe que divide o texto em blocos menores (chunks)
 class Chunks:
     def __init__(self):
         #Texto de exemplo que será dividido em blocos menores (chunks)
