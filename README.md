@@ -18,8 +18,6 @@ Aplicação que utiliza o RAG para tornar as respostas da LLM mais precisas com 
 
 ## :pencil: Explicação
 Com este repositório você poderá entender um pouco melhor de como a técnica RAG funciona e como pode ser benéfica para seus projetos de IA. Se já tem alguma noção de como o RAG funciona e deseja ir direto ao como o código funciona, sugiro que pule para próxim estapa.
-- [Explicação do Código](docs/instalacao.md)
-- [Implementação Prática(docs/api.md)
 
 ### ***RAG - RETRIEVAL-AUGMENTED GENERATION:***
 > É uma tecnica utilizada para melhorar a precisão das respostas das LLMs, diminuindo assim alucinações e imprecisões.
