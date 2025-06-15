@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  ollamaLLM:
+      container_name: ollama_container
+      image: ollama/ollama:latest
+      pull_policy: always
+      tty: true
+      restart: always
+      environment:
+          - OLLAMA_KEEP_ALIVE=24h
+          - OLLAMA_HOST=0.0.0.0
+      volumes:
+          - .:/code
+          - ollama:/root/.ollama
+      ports:
+          - '${PORT_OLLAMA}:11434'
+      entrypoint: /bin/sh -c "ollama serve & sleep 5 && ollama pull gemma3:1b && tail -f /dev/null"
+
+volumes:
+    ollama:
