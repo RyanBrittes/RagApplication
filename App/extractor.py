@@ -13,3 +13,4 @@ class Extractor:
             self.string_pdf += page.get_text()
         self.pdf_file.close()
         return self.string_pdf
+    

@@ -6,8 +6,8 @@ from chunks import Chunks
 class Embed:
     def __init__(self):
         self.chunks = Chunks()
-
-    #Criador de embeddings, cria um dicionário com 4 chaves
+        
+    #Criador de embeddings, cria um dicionário com 4 chaves a partir de um documento dividido em blocos menores (chunks)
     def embed_text(self):
         output = embed.text(
             texts=self.chunks.split_data(),

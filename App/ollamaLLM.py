@@ -27,3 +27,4 @@ while True:
         )
 
         print("***\n" + response['message']['content'] + "\n***")
+        
