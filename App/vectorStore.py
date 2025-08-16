@@ -9,7 +9,7 @@ class VectorStore:
         self.embedding = Embed()
         self.documents = Chunks()
         self.client = chromadb.PersistentClient(
-            path="/home/ryan/Documents/AI/RagApp/ChromaDB",
+            path="ChromaDB",
             settings=Settings(allow_reset=True)
             )
 
